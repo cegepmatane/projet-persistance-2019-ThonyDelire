@@ -29,8 +29,8 @@ public class ExoplaneteDOA {
 		}
 		
 		
-		session.close();
-		generateurSession.close();
+		//session.close();
+		//generateurSession.close();
 		
 		return listeExoplanete;
 	}
