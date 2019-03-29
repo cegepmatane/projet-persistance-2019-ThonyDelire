@@ -12,7 +12,7 @@ public class App {
 		}*/
 		
 		NavigateurDesVues.launch(NavigateurDesVues.class, args);
-		ControleurExoplanete controleur = new ControleurExoplanete();
+		
 		
 
 	}

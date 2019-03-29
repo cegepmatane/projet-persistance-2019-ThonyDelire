@@ -25,7 +25,7 @@ public class ExoplaneteDOA {
 		{
 			Exoplanete exoplanete = (Exoplanete)visiteurExoplanete.next();
 			listeExoplanete.add(exoplanete);
-			//System.out.println("Planete" + exoplanete.getNom());
+			System.out.println("Planete" + exoplanete.getNom());
 		}
 		
 		

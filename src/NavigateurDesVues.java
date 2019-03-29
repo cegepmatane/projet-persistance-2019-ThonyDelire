@@ -9,9 +9,12 @@ public class NavigateurDesVues extends Application {
 
 	protected PageListeExoplanete pageListeExoplanete;
 	protected Stage stade;
+	protected ControleurExoplanete controleur;
 	
 	public NavigateurDesVues() 
 	{
+		NavigateurDesVues.instance = this;
+		
 		
 			try {
 				this.pageListeExoplanete = new PageListeExoplanete();
@@ -19,6 +22,7 @@ public class NavigateurDesVues extends Application {
 				e.printStackTrace();
 			}
 
+			this.controleur = new ControleurExoplanete();
 	}
 	
 	public PageListeExoplanete getPageListeExoplanete() {
@@ -35,8 +39,8 @@ public class NavigateurDesVues extends Application {
 	public void start(Stage stade) throws Exception {
 		this.stade = stade;
 		this.stade.setScene(this.pageListeExoplanete);
-		ExoplaneteDOA exoplaneteDOA = new ExoplaneteDOA();
-		this.pageListeExoplanete.afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
+		//ExoplaneteDOA exoplaneteDOA = new ExoplaneteDOA();
+		//this.pageListeExoplanete.afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
 		this.stade.show();
 		
 	}
