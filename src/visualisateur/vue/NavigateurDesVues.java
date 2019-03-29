@@ -1,13 +1,16 @@
+package visualisateur.vue;
 import java.io.IOException;
 
 import javax.management.InstanceAlreadyExistsException;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import visualisateur.action.ControleurExoplanete;
 
 public class NavigateurDesVues extends Application {
 
 	protected PageListeExoplanete pageListeExoplanete;
+	protected PageExoplanete pageExoplanete;
 	protected Stage stade;
 	protected ControleurExoplanete controleur;
 	
@@ -18,6 +21,7 @@ public class NavigateurDesVues extends Application {
 		
 			try {
 				this.pageListeExoplanete = new PageListeExoplanete();
+				this.pageExoplanete = new PageExoplanete();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -43,6 +47,19 @@ public class NavigateurDesVues extends Application {
 		//this.pageListeExoplanete.afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
 		this.stade.show();
 		
+		this.controleur.initialiser();
+		//this.navigerVersPageExoplanete();
+		//this.navigerVersListePageExoplanete();
+		
+	}
+	
+	public void navigerVersPageExoplanete()
+	{
+		this.stade.setScene(this.pageExoplanete);
+	}
+	public void navigerVersListePageExoplanete()
+	{
+		this.stade.setScene(this.pageListeExoplanete);
 	}
 	
 	

@@ -1,3 +1,4 @@
+package visualisateur.modele;
 
 public class Exoplanete {
 	

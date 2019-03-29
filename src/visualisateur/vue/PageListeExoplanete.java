@@ -1,3 +1,4 @@
+package visualisateur.vue;
 
 import java.io.IOException;
 import java.util.List;
@@ -6,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import visualisateur.modele.Exoplanete;
 
 public class PageListeExoplanete extends Page {
 
@@ -23,6 +25,7 @@ public class PageListeExoplanete extends Page {
 		}
 		
 	}
+	
 
 	
 }
