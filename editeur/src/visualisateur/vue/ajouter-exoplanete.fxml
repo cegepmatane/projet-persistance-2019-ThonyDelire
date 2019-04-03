@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffefa0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="211.0" layoutY="22.0" text="Ajouter une Exoplanete">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <VBox layoutX="21.0" layoutY="72.0" prefHeight="503.0" prefWidth="759.0">
+         <children>
+            <Label text="Nom:" />
+            <TextArea fx:id="champNom" prefHeight="27.0" prefWidth="759.0" />
+            <Label text="Étoile:" />
+            <TextArea fx:id="champEtoile" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Masse:" />
+            <TextArea fx:id="champMasse" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Rayon:" />
+            <TextArea fx:id="champRayon" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Flux:" />
+            <TextArea fx:id="champFlux" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Temperature:" />
+            <TextArea fx:id="champTemperature" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Période:" />
+            <TextArea fx:id="champPeriode" prefHeight="27.0" prefWidth="759.0" />
+			<Label text="Distance:" />
+            <TextArea fx:id="champDistance" prefHeight="27.0" prefWidth="759.0" />
+            <Button fx:id="enregistrer" mnemonicParsing="false" prefHeight="31.0" prefWidth="772.0" text="Sauvegarder" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
