@@ -29,8 +29,12 @@ public class ControleurExoplanete
 		this.navigateur.navigerVersListePageExoplanete();
 	}
 	
-	public void recevoirActionNaviguerPageExoplanete(ActionEvent evenment)
+	public void recevoirActionNaviguerPageAjouterExoplanete(ActionEvent evenment)
 	{
-		this.navigateur.navigerVersPageExoplanete();
+		this.navigateur.navigerVersPageAjouterExoplanete();
+	}
+	public void recevoirActionNaviguerPageEditerExoplanete(ActionEvent evenment)
+	{
+		this.navigateur.navigerVersPageEditerExoplanete();
 	}
 }

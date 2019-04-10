@@ -12,6 +12,7 @@ public class NavigateurDesVues extends Application {
 	protected PageListeExoplanete pageListeExoplanete;
 	protected PageExoplanete pageExoplanete;
 	protected PageAjouterExoplanete pageAjouterExoplanete;
+	protected PageEditerExoplanete pageEditerExoplanete;
 	protected Stage stade;
 	protected ControleurExoplanete controleur;
 	
@@ -23,6 +24,8 @@ public class NavigateurDesVues extends Application {
 			try {
 				this.pageListeExoplanete = new PageListeExoplanete();
 				this.pageExoplanete = new PageExoplanete();
+				this.pageAjouterExoplanete = new PageAjouterExoplanete();
+				this.pageEditerExoplanete = new PageEditerExoplanete();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -43,6 +46,7 @@ public class NavigateurDesVues extends Application {
 	@Override
 	public void start(Stage stade) throws Exception {
 		this.stade = stade;
+		this.stade.setTitle("NASA in JAVA");
 		this.stade.setScene(this.pageListeExoplanete);
 		//ExoplaneteDOA exoplaneteDOA = new ExoplaneteDOA();
 		//this.pageListeExoplanete.afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
@@ -54,13 +58,17 @@ public class NavigateurDesVues extends Application {
 		
 	}
 	
-	public void navigerVersPageExoplanete()
+	public void navigerVersPageAjouterExoplanete()
 	{
-		this.stade.setScene(this.pageExoplanete);
+		this.stade.setScene(this.pageAjouterExoplanete);
 	}
 	public void navigerVersListePageExoplanete()
 	{
 		this.stade.setScene(this.pageListeExoplanete);
+	}
+	public void navigerVersPageEditerExoplanete()
+	{
+		this.stade.setScene(this.pageEditerExoplanete);
 	}
 	
 	

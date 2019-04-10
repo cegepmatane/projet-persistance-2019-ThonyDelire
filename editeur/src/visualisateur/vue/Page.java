@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 abstract public class Page extends Scene{
 
 	public Page(Parent racine) {
-		super(racine, 800, 600);
+		super(racine, 800, 650);
 	}
 
 }

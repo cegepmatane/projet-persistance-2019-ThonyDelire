@@ -5,14 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffefa0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffefa0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisateur.action.ControleurExoplanete">
    <children>
-      <Label layoutX="211.0" layoutY="22.0" text="Ajouter une Exoplanete">
+      <Label layoutX="218.0" layoutY="8.0" text="Ajouter une Exoplanete">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <VBox layoutX="21.0" layoutY="72.0" prefHeight="503.0" prefWidth="759.0">
+      <VBox layoutX="21.0" layoutY="49.0" prefHeight="429.0" prefWidth="759.0">
          <children>
             <Label text="Nom:" />
             <TextArea fx:id="champNom" prefHeight="27.0" prefWidth="759.0" />
@@ -33,5 +33,7 @@
             <Button fx:id="enregistrer" mnemonicParsing="false" prefHeight="31.0" prefWidth="772.0" text="Sauvegarder" />
          </children>
       </VBox>
+      <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="Retour"
+      onAction="#recevoirActionNaviguerPageListeExoplanete" />
    </children>
 </AnchorPane>

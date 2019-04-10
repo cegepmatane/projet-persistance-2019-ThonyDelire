@@ -13,8 +13,10 @@
          </font>
       </Label>
       <ListView fx:id="listeExoplanetes" layoutX="43.0" layoutY="109.0" prefHeight="389.0" prefWidth="717.0" />
-      <Button layoutX="43.0" layoutY="538.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="160.0" text="Ajouter" />
-      <Button layoutX="325.0" layoutY="538.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="153.0" text="Editer" />
+      <Button fx:id="actionNavihuerPageAjouterExoplanete" layoutX="43.0" layoutY="538.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="160.0" text="Ajouter"
+      onAction="#recevoirActionNaviguerPageAjouterExoplanete" />
+      <Button fx:id="actionNavigerPageEditerExoplanete" layoutX="325.0" layoutY="538.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="153.0" text="Editer" 
+      onAction="#recevoirActionNaviguerPageEditerExoplanete"/>
       <Button layoutX="607.0" layoutY="538.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="153.0" text="Effacer" />
    </children>
 </AnchorPane>

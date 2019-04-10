@@ -5,35 +5,34 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffefa0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisateur.action.ControleurExoplanete">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #7a96ba;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisateur.action.ControleurExoplanete">
    <children>
-      <Label layoutX="218.0" layoutY="8.0" text="Ajouter une Exoplanete">
+      <Label layoutX="264.0" layoutY="8.0" text="Editer Exoplanete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
       <VBox layoutX="21.0" layoutY="49.0" prefHeight="429.0" prefWidth="759.0">
          <children>
-            <Label text="Nom:" />
+            <Label text="Nom:" textFill="WHITE" />
             <TextArea fx:id="champNom" prefHeight="27.0" prefWidth="759.0" />
-            <Label text="Étoile:" />
+            <Label text="Étoile:" textFill="WHITE" />
             <TextArea fx:id="champEtoile" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Masse:" />
+			<Label text="Masse:" textFill="WHITE" />
             <TextArea fx:id="champMasse" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Rayon:" />
+			<Label text="Rayon:" textFill="WHITE" />
             <TextArea fx:id="champRayon" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Flux:" />
+			<Label text="Flux:" textFill="#fffffffa" />
             <TextArea fx:id="champFlux" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Temperature:" />
+			<Label text="Temperature:" textFill="WHITE" />
             <TextArea fx:id="champTemperature" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Période:" />
+			<Label text="Période:" textFill="WHITE" />
             <TextArea fx:id="champPeriode" prefHeight="27.0" prefWidth="759.0" />
-			<Label text="Distance:" />
+			<Label text="Distance:" textFill="WHITE" />
             <TextArea fx:id="champDistance" prefHeight="27.0" prefWidth="759.0" />
             <Button fx:id="enregistrer" mnemonicParsing="false" prefHeight="31.0" prefWidth="772.0" text="Sauvegarder" />
          </children>
       </VBox>
-      <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="Retour"
-      onAction="#recevoirActionNaviguerPageListeExoplanete" />
+      <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" onAction="#recevoirActionNaviguerPageListeExoplanete" prefHeight="31.0" prefWidth="126.0" text="Retour" />
    </children>
 </AnchorPane>
