@@ -1,6 +1,8 @@
 package visualisateur.action;
 
 
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import visualisateur.donnee.ExoplaneteDAO;
 import visualisateur.modele.Exoplanete;
@@ -23,6 +25,8 @@ public class ControleurExoplanete
 	public void initialiser()
 	{
 		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDOA.listerExoplanete());
+		AlgorithmeRecherche algorithme = new AlgorithmeRechercheProfesseurVadeboncoeur(exoplaneteDOA.listerExoplanete());
+		//List<Exoplanete> planeteTrouver = algorithme.executer();
 	}
 	
 	public void recevoirActionNaviguerPageListeExoplanete(ActionEvent evenment)

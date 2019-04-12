@@ -5,15 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisateur.action.ControleurExoplanete">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #efefef;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisateur.action.ControleurExoplanete">
    <children>
       <TextArea fx:id="Exoplanetes" editable="false" layoutX="37.0" layoutY="148.0" prefHeight="378.0" prefWidth="726.0" style="-fx-background-color: yellow;" />
-      <Label layoutX="303.0" layoutY="37.0" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: orange;" text="Exoplanètes" textFill="WHITE">
+      <Label layoutX="303.0" layoutY="37.0" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: #efefef;" text="Exoplanètes">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="37.0" layoutY="543.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="726.0" text="PageListeExoplanete" 
-      onAction="#recevoirActionNaviguerPageListeExoplanete" />
+      <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="37.0" layoutY="543.0" mnemonicParsing="false" onAction="#recevoirActionNaviguerPageListeExoplanete" prefHeight="31.0" prefWidth="726.0" text="PageListeExoplanete" />
    </children>
 </AnchorPane>
