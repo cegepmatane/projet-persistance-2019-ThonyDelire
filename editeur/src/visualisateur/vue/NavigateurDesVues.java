@@ -33,6 +33,14 @@ public class NavigateurDesVues extends Application {
 			this.controleur = new ControleurExoplanete();
 	}
 	
+	public PageAjouterExoplanete getPageAjouterExoplanete() {
+		return pageAjouterExoplanete;
+	}
+
+	public PageEditerExoplanete getPageEditerExoplanete() {
+		return pageEditerExoplanete;
+	}
+
 	public PageListeExoplanete getPageListeExoplanete() {
 		return pageListeExoplanete;
 	}

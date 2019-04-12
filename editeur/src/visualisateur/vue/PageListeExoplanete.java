@@ -20,17 +20,22 @@ public class PageListeExoplanete extends Page {
 		
 	}
 	
-	public void afficherListeExoplanete(List<Exoplanete> listeExoplanetes)
+	public void afficherListeExoplanetes(List<Exoplanete> listeExoplanetes)
 	{
-		ObservableList<String> items = FXCollections.observableArrayList();
-		ListView espaceTexte = (ListView) this.lookup("#listeExoplanetes");
-		for(Exoplanete exoplanete : listeExoplanetes) 
+		ObservableList<String> items = FXCollections.observableArrayList ();
+		ListView grilleDesPlanetes = (ListView) this.lookup("#listeExoplanetes");
+		for(Exoplanete exoplanete : listeExoplanetes)
 		{
 			items.add(exoplanete.getNom());
-			//espaceTexte.appendText(exoplanete.getNom() + "\n");
+			//espaceTexte.appendText(exoplanete.getNom() + "\n");					
 		}
-		
-		espaceTexte.setItems(items);
+		grilleDesPlanetes.setItems(items);
+	}
+
+	public String lireExoplaneteSelectionnee()
+	{
+		ListView grilleDesPlanetes = (ListView) this.lookup("#listeExoplanetes");
+		return grilleDesPlanetes.getSelectionModel().getSelectedItem().toString();		
 	}
 	
 

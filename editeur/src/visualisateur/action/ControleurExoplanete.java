@@ -2,18 +2,19 @@ package visualisateur.action;
 
 
 import javafx.event.ActionEvent;
-import visualisateur.donnee.ExoplaneteDOA;
+import visualisateur.donnee.ExoplaneteDAO;
+import visualisateur.modele.Exoplanete;
 import visualisateur.vue.NavigateurDesVues;
 
 public class ControleurExoplanete 
 {
 	protected NavigateurDesVues navigateur;
-	protected ExoplaneteDOA exoplaneteDOA;
+	protected ExoplaneteDAO exoplaneteDOA;
 
 	
 	public ControleurExoplanete()
 	{
-		this.exoplaneteDOA = new ExoplaneteDOA();
+		this.exoplaneteDOA = new ExoplaneteDAO();
 		this.navigateur = NavigateurDesVues.getInstance();
 		
 		//this.navigateur.navigerVersPageExoplanete();
@@ -21,7 +22,7 @@ public class ControleurExoplanete
 	}
 	public void initialiser()
 	{
-		this.navigateur.getPageListeExoplanete().afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
+		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDOA.listerExoplanete());
 	}
 	
 	public void recevoirActionNaviguerPageListeExoplanete(ActionEvent evenment)
@@ -35,6 +36,19 @@ public class ControleurExoplanete
 	}
 	public void recevoirActionNaviguerPageEditerExoplanete(ActionEvent evenment)
 	{
+		String nom = this.navigateur.getPageListeExoplanete().lireExoplaneteSelectionnee();
+		Exoplanete exoplanete = this.exoplaneteDOA.lireExoplaneteSelonNom(nom);
+		this.navigateur.getPageEditerExoplanete().afficherExoplanete(exoplanete);
+		
 		this.navigateur.navigerVersPageEditerExoplanete();
 	}
+	
+	public void recevoirActionEnregistreAjout(ActionEvent evenment)
+	{
+		Exoplanete exoplanete = this.navigateur.getPageAjouterExoplanete().lireExoplanete();
+		
+		this.navigateur.navigerVersListePageExoplanete();
+	}
+		
+	
 }

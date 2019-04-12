@@ -30,7 +30,8 @@
             <TextArea fx:id="champPeriode" prefHeight="27.0" prefWidth="759.0" />
 			<Label text="Distance:" />
             <TextArea fx:id="champDistance" prefHeight="27.0" prefWidth="759.0" />
-            <Button fx:id="enregistrer" mnemonicParsing="false" prefHeight="31.0" prefWidth="772.0" text="Sauvegarder" />
+            <Button fx:id="enregistrer" mnemonicParsing="false" prefHeight="31.0" prefWidth="772.0" text="Sauvegarder"
+            onAction="#recevoirActionEnregistreAjout" />
          </children>
       </VBox>
       <Button fx:id="actionNavihuerPageListeExoplanete" layoutX="645.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" text="Retour"

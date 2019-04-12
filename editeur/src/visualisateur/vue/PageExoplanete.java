@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 public class PageExoplanete extends Page {
 
 	public PageExoplanete() throws IOException {
-		super(FXMLLoader.load(PageListeExoplanete.class.getResource("Exoplanete.fxml")));
+		super(FXMLLoader.load(PageListeExoplanete.class.getResource("editer-exoplanete.fxml")));
 		
 	}
 	
