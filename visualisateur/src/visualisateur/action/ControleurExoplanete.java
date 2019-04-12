@@ -2,35 +2,42 @@ package visualisateur.action;
 
 
 import javafx.event.ActionEvent;
-import visualisateur.donnee.ExoplaneteDOA;
-import visualisateur.vue.NavigateurDesVues;
+import visualisateur.donnee.ExoplaneteDAO;
+import visualisateur.modele.Exoplanete;
+import visualisateur.vue.NavigateurDesPages;
 
 public class ControleurExoplanete 
 {
-	protected NavigateurDesVues navigateur;
-	protected ExoplaneteDOA exoplaneteDOA;
+	protected NavigateurDesPages navigateur;
+	protected ExoplaneteDAO exoplaneteDOA;
 
 	
 	public ControleurExoplanete()
 	{
-		this.exoplaneteDOA = new ExoplaneteDOA();
-		this.navigateur = NavigateurDesVues.getInstance();
+		this.exoplaneteDOA = new ExoplaneteDAO();
+		this.navigateur = NavigateurDesPages.getInstance();
 		
 		//this.navigateur.navigerVersPageExoplanete();
 		//this.navigateur.navigerVerslistePageExoplanete();
 	}
 	public void initialiser()
 	{
-		this.navigateur.getPageListeExoplanete().afficherListeExoplanete(exoplaneteDOA.listerExoplanete());
+		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDOA.listerExoplanete());
 	}
 	
 	public void recevoirActionNaviguerPageListeExoplanete(ActionEvent evenment)
 	{
-		this.navigateur.navigerVersListePageExoplanete();
+		this.navigateur.naviguerVersPageListeExoplanete();
 	}
 	
 	public void recevoirActionNaviguerPageExoplanete(ActionEvent evenment)
 	{
-		this.navigateur.navigerVersPageExoplanete();
+		String nom = this.navigateur.getPageListeExoplanete().lireExoplaneteSelectionnee(); 
+		Exoplanete exoplanete = this.exoplaneteDOA.lireExoplaneteSelonNom(nom);
+		this.navigateur.getPageExoplanete().afficherExoplanete(exoplanete);
+		
+		this.navigateur.naviguerVersPageExoplanete();
+		
 	}
+	
 }

@@ -1,6 +1,6 @@
 import java.util.List;
 
-import visualisateur.vue.NavigateurDesVues;
+import visualisateur.vue.NavigateurDesPages;
 
 public class App {
 
@@ -13,7 +13,7 @@ public class App {
 			System.out.println(exoplanete.getNom());
 		}*/
 		
-		NavigateurDesVues.launch(NavigateurDesVues.class, args);
+		NavigateurDesPages.launch(NavigateurDesPages.class, args);
 		
 		
 
